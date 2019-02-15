@@ -12,6 +12,12 @@ sudo: required
 install:
   - pip install flask
 
+addons:
+sonarcloud:
+  organization: tfrigini-github
+  token:
+    secure: $SONAR_TOKEN
+
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.
 script:
   - python test.py
